@@ -1,0 +1,395 @@
+ 
+## EJRCICIO 01
+# Solicitar al usuario la edad del cliente
+edad = int(input("Ingrese la edad del cliente: "))
+
+# Calcular el precio de la entrada según la edad
+if edad < 4:
+    precio = 0  # Entrada gratis para menores de 4 años
+elif 4 <= edad <= 18:
+    precio = 5  # Precio de entrada de 5 soles para edades entre 4 y 18 años
+else:
+    precio = 10  # Precio de entrada de 10 soles para mayores de 18 años
+
+# Mostrar el precio de la entrada al cliente
+print("El precio de la entrada es:", precio, "soles")
+
+
+## EJERCICIO 02
+# Solicitar al usuario una palabra
+palabra = input("Ingrese una palabra: ")
+
+# Inicializar contador
+contador = 0
+
+# Mostrar la palabra 10 veces utilizando un bucle while
+while contador < 10:
+    print(palabra)
+    contador += 1
+
+## EJERCICIO 03
+# Solicitar al usuario un número entero positivo
+numero = int(input("Ingrese un número entero positivo: "))
+
+# Validar si el número ingresado es positivo
+if numero > 0:
+    impares = []
+    i = 1
+
+    # Generar números impares hasta el número ingresado
+    while i <= numero:
+        if i % 2 != 0:
+            impares.append(str(i))
+        i += 1
+
+    # Mostrar los números impares separados por comas
+    impares_str = ", ".join(impares)
+    print("Números impares desde 1 hasta", numero, ":", impares_str)
+else:
+    print("Por favor, ingrese un número entero positivo.")
+## EJERCICIO 04
+
+# Inicializar el multiplicador en 1
+multiplicador = 1
+
+# Mientras el multiplicador sea menor o igual a 10
+while multiplicador <= 10:
+    # Mostrar la tabla de multiplicar para el multiplicador actual
+    numero = 1
+    while numero <= 10:
+        resultado = multiplicador * numero
+        print(multiplicador, "x", numero, "=", resultado)
+        numero += 1
+    print()  # Salto de línea entre cada tabla de multiplicar
+    multiplicador += 1
+
+
+ ## EJERCICIO 05
+    
+ # Solicitar al usuario una palabra
+palabra = input("Ingrese una palabra: ")
+
+# Obtener la longitud de la palabra
+longitud = len(palabra)
+
+# Inicializar el índice al final de la palabra
+indice = longitud - 1
+
+# Mientras el índice sea mayor o igual a 0
+while indice >= 0:
+    letra = palabra[indice]
+    print(letra)
+    indice -= 1
+    
+ 
+## EJERCICIO 06:
+
+# Solicitar al usuario un número entero
+numero = int(input("Ingrese un número entero: "))
+
+# Inicializar el contador
+contador = 1
+
+# Imprimir el triángulo rectángulo
+while contador <= numero:
+    print('*' * contador)
+    contador += 1
+
+
+## EJERCICIO 07:
+# Solicitar al usuario una frase y una letra
+frase = input("Ingrese una frase: ")
+letra = input("Ingrese una letra: ")
+
+# Inicializar el contador de ocurrencias de la letra
+contador = 0
+indice = 0
+
+# Contar el número de veces que aparece la letra en la frase
+while indice < len(frase):
+    if frase[indice] == letra:
+        contador += 1
+    indice += 1
+
+# Mostrar el resultado al usuario
+print("La letra", letra, "aparece", contador, "veces en la frase.")
+
+    
+## EJERCICIO 08:
+
+# Solicitar al usuario una palabra
+palabra = input("Ingrese una palabra: ")
+
+# Obtener la longitud de la palabra
+longitud = len(palabra)
+
+# Inicializar los índices para la primera y última letra
+primera_letra = palabra[0]
+ultima_letra = palabra[-1]
+
+# Calcular el índice de la letra del medio o las letras de los medios (en caso de longitud par)
+if longitud % 2 == 0:
+    indice_medio_1 = longitud // 2 - 1
+    indice_medio_2 = longitud // 2
+    letra_medio = palabra[indice_medio_1] + palabra[indice_medio_2]
+else:
+    indice_medio = longitud // 2
+    letra_medio = palabra[indice_medio]
+
+# Mostrar las letras por pantalla separadas por comas
+print(primera_letra + ", " + letra_medio + ", " + ultima_letra)
+
+
+
+## EJRCICIO 09:
+
+# Solicitar al usuario la cantidad de números a introducir
+cantidad_numeros = int(input("Ingrese la cantidad de números que va a introducir: "))
+
+# Inicializar variables
+anterior = None
+contador = 0
+
+# Pedir los números al usuario y verificar si son mayores que el anterior
+while contador < cantidad_numeros:
+    numero = float(input("Ingrese un número: "))
+    
+    if anterior is not None and numero <= anterior:
+        print("El número", numero, "no es mayor que el anterior.")
+    
+    anterior = numero
+    contador += 1
+
+
+## EJERCICIO 10
+# Solicitar al usuario una frase y una letra
+frase = input("Ingrese una frase: ")
+letra = input("Ingrese una letra: ")
+
+# Inicializar el contador de apariciones de la letra
+contador = 0
+indice = 0
+
+# Contar el número de veces que aparece la letra en la frase
+while indice < len(frase):
+    if frase[indice] == letra:
+        contador += 1
+    indice += 1
+
+# Mostrar el resultado al usuario
+print("La letra", letra, "aparece", contador, "veces en la frase.")
+
+
+## EJERCICIO 11
+
+# Solicitar al usuario la cantidad de números a introducir
+cantidad_numeros = int(input("Ingrese cuántos números va a introducir: "))
+
+# Inicializar la suma y el contador de números introducidos
+suma = 0
+contador = 0
+
+# Pedir los números al usuario y calcular la suma
+while contador < cantidad_numeros:
+    numero = float(input("Ingrese un número: "))
+    suma += numero
+    contador += 1
+
+# Mostrar la suma de los números introducidos
+print("La suma de los números introducidos es:", suma)
+
+
+## EJERCIO 12
+
+# Solicitar al usuario la cantidad de números a introducir
+cantidad_numeros = int(input("Ingrese cuántos números va a introducir: "))
+
+# Inicializar el contador de números negativos y el contador de números introducidos
+contador_negativos = 0
+contador = 0
+
+# Pedir los números al usuario y contar los negativos
+while contador < cantidad_numeros:
+    numero = float(input("Ingrese un número: "))
+    if numero < 0:
+        contador_negativos += 1
+    contador += 1
+
+# Mostrar la cantidad de números negativos introducidos
+print("Ha introducido", contador_negativos, "números negativos.")
+
+
+
+## EJERCICIO 13
+
+# Función para calcular la raíz cuadrada de la suma de A y B
+def calcular_raiz_suma(a, b):
+    return (a + b) ** 0.5
+
+# Función para calcular A / B
+def calcular_division(a, b):
+    if b != 0:
+        return a / b
+    else:
+        return "Error: No se puede dividir por 0"
+
+# Función para calcular (A * B) / 2.5
+def calcular_formula(a, b):
+    return (a * b) / 2.5
+
+# Inicializar la operación
+operacion = ""
+
+# Activar la calculadora
+while operacion != "SAL":
+    # Solicitar los datos A, B y la operación al usuario
+    a = float(input("Ingrese el valor de A: "))
+    b = float(input("Ingrese el valor de B: "))
+    operacion = input("Ingrese la operación (1: Raíz cuadrada de la suma, 2: División, 3: Fórmula): ")
+
+    # Realizar la operación seleccionada
+    if operacion=="1":
+        resultado= calcular_raiz_suma(a,b)
+    elif operacion=="2":
+        resultado=calcular_division(a,b)
+    elif operacion=="3":
+        resultado=calcular_formula(a,b)
+    else:
+        print("operacion no valida.intente de nuevo.")
+        continue
+    print("el resulatdo es:",resultado)
+
+
+
+## ejercicio 14
+
+# Definir el PIN SECRETO
+PIN_SECRETO = "1234"
+
+# Inicializar el contador de intentos
+intentos = 3
+
+# Intentar desbloquear la pantalla
+while intentos > 0:
+    pin = input("Introduzca el PIN: ")
+    if pin == PIN_SECRETO:
+        print("Login correcto")
+        break
+    else:
+        intentos -= 1
+        if intentos > 0:
+            print("PIN incorrecto. Intentos restantes:", intentos)
+        else:
+            print("Llamando a la policía")
+
+
+
+## EJRCICIO 15:
+
+# Solicitar al usuario la cantidad de términos de la sucesión de Fibonacci a generar
+n = int(input("Ingrese la cantidad de términos de la sucesión de Fibonacci a generar: "))
+
+# Inicializar los primeros dos términos de la sucesión
+a, b = 0, 1
+
+# Mostrar los primeros n términos de la sucesión de Fibonacci
+contador = 0
+while contador < n:
+    print(a, end=" ")
+    a, b = b, a + b
+    contador += 1
+
+
+
+## EJERCICIO 16:
+
+# Inicializar la lista de tareas pendientes
+tareas = []
+
+# Menú interactivo
+opcion = ""
+while opcion != "Salir":
+    print("\nMenú de opciones:")
+    print("1. Agregar tarea")
+    print("2. Marcar tarea como completada")
+    print("3. Mostrar tareas")
+    print("4. Salir")
+    
+    opcion = input("Seleccione una opción: ")
+    
+    if opcion == "1":
+        nueva_tarea = input("Ingrese la nueva tarea: ")
+        tareas.append(nueva_tarea)
+    elif opcion == "2":
+        tarea_completada = input("Ingrese la tarea completada: ")
+        if tarea_completada in tareas:
+            tareas.remove(tarea_completada)
+            print("Tarea marcada como completada.")
+        else:
+            print("La tarea no se encuentra en la lista.")
+    elif opcion == "3":
+     print("\nLista de tareas pendientes:")
+     for tarea in tareas:
+            print("-", tarea)
+    elif opcion == "4":
+     print("Saliendo del programa.")
+    break
+else:
+        print("Opción no válida. Inténtelo de nuevo.")
+  
+  
+  
+## EJERCICIO 17
+
+# Saldo inicial del cajero automático
+saldo = 1000
+
+# Menú interactivo del cajero automático
+opcion = ""
+while opcion != "Salir":
+    print("\nMenú de opciones:")
+    print("1. Verificar saldo")
+    print("2. Depositar dinero")
+    print("3. Retirar dinero")
+    print("4. Salir")
+    
+    opcion = input("Seleccione una opción: ")
+    
+    if opcion == "1":
+        print("Saldo actual: $", saldo)
+    elif opcion == "2":
+        deposito = float(input("Ingrese la cantidad a depositar: "))
+        saldo += deposito
+        print("Depósito exitoso. Saldo actual: $", saldo)
+    elif opcion == "3":
+        retiro = float(input("Ingrese la cantidad a retirar: "))
+        if retiro <= saldo:
+            saldo -= retiro
+            print("Retiro exitoso. Saldo actual:$",saldo)
+        else:
+            print("saldo suficiente.")
+            elif opcion =="4":
+            print("saliendo programa")
+            break
+    else:
+        print("opcion no valida.intentelo de nuevo.")
+
+
+
+
+
+## EJERCICIO 18
+
+# Solicitar y validar la contraseña
+while True:
+    contraseña1 = input("Ingrese la contraseña: ")
+    contraseña2 = input("Confirme la contraseña: ")
+    
+    if contraseña1 == contraseña2:
+        print("Contraseña válida. ¡Acceso concedido!")
+        break
+    else:
+        print("Las contraseñas no coinciden. Inténtelo de nuevo.")
+
+
+
